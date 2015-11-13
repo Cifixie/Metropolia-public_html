@@ -11,7 +11,7 @@ $(function() {
 		var open = regular.open.split(':');
 		var close = regular.close.split(':');
 		var hours = date.getHours();
-		return hours > open[0] && hours < close[0];
+		return hours > parseInt(open[0]) && hours < parseInt(close[0]);
 	}
 	
 	$.getJSON("http://messi.hyyravintolat.fi/publicapi/restaurant/27", function( json ) {
