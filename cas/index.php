@@ -1,0 +1,1 @@
+<script type="text/javascript" src="http://users.metropolia.fi/~tommikes/cas/script.js"></script>

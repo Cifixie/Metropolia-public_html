@@ -1,0 +1,33 @@
+body{
+ font-size:14px;
+ font-style:Verdana, Arial, Helvetica;
+ color:#000;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 382px;
+}
+#header {
+ width: 382px;
+ float: left;
+ height: 130px;
+ margin: 50px 0px 0px 0px;
+ background-color: #f68c1f;
+}
+#content {
+ width: 382px;
+ float: left;
+ display: inline;
+ padding: 12px 0px 40px 0px;
+ background-color: #f68c1f;
+}
+#footer {
+ width: 382px;
+ float: left;
+ display: inline;
+ padding: 0px 0px 0px 5px;
+}
+p i{
+color:#d52b1e;
+}
