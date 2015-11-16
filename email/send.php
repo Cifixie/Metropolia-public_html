@@ -31,4 +31,5 @@ if ($_POST['submit']) {
   $message = file_get_contents('./template.html', true);
 
   mail($to, $subject, $message, $headers);
+  echo '<h1>mail sent!</h1>';
 }
