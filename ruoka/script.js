@@ -1,7 +1,7 @@
 $(function() {
 	var date = new Date();
 	var dateFrom = date.getDate();
-	var dateTo = dateFrom+2;
+	var dateTo = dateFrom+1;
 	var foodType = 'Metropolia Edullisesti';
 
 	var isRegular = function(regular, weekday) {
@@ -13,7 +13,7 @@ $(function() {
 		var hours = date.getHours();
 		return hours > parseInt(open[0]) && hours < parseInt(close[0]);
 	}
-	
+
 	$.getJSON("http://messi.hyyravintolat.fi/publicapi/restaurant/27", function( json ) {
 		var restaurant = json.information.restaurant;
 		var regular = json.information.business.regular[0];
@@ -38,7 +38,7 @@ $(function() {
 			});
 		console.log(regular );
 		$('#restaurant-name').text(restaurant);
-		
+
 		var labelId = isOpen(regular) ? 'label-open' : 'label-closed';
 		$('#' + labelId).toggleClass('hidden');
 		$.each(menu, function(index, data) {
@@ -46,17 +46,17 @@ $(function() {
 			var content = $('<div/>').addClass('panel-body');
 			var list = $('<ul/>');
 			content.append(list);
-			
+
 			$.each(data.menu, function(index, data) {
 				var listItem = $('<li/>');
 				listItem.text(data);
 				list.append(listItem);
 			});
-			
+
 			var wrapper = $('<div/>').addClass('panel panel-default');
 			wrapper.append(head);
 			wrapper.append(content);
-			
+
 			$('#content').append(wrapper);
 		});
 	});
